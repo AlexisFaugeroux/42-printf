@@ -6,13 +6,16 @@
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 17:05:04 by afaugero          #+#    #+#             */
-/*   Updated: 2024/11/23 16:41:41 by afaugero         ###   ########.fr       */
+/*   Updated: 2024/11/28 12:03:07 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_parse_hex_low(va_list args)
 {
-	ft_putnbr_ulong_base_fd(va_arg(args, int), FT_HEX_BASE_LOW, 1);
+	unsigned int	number;
+
+	number = (unsigned int)va_arg(args, int);
+	ft_to_hex(number, FT_HEX_BASE_LOW, 1);
 }

@@ -6,14 +6,13 @@
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 17:04:24 by afaugero          #+#    #+#             */
-/*   Updated: 2024/11/23 17:10:49 by afaugero         ###   ########.fr       */
+/*   Updated: 2024/11/28 12:02:45 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_parse_udec(va_list args)
 {
-	ft_putunbr_fd(va_arg(args, unsigned int), 1);
+	ft_putunbr(va_arg(args, unsigned int), 1);
 }

@@ -6,14 +6,13 @@
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 16:51:03 by afaugero          #+#    #+#             */
-/*   Updated: 2024/11/22 17:02:34 by afaugero         ###   ########.fr       */
+/*   Updated: 2024/11/28 12:02:35 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_parse_int(va_list args)
 {
-	ft_putnbr_fd(va_arg(args, int), 1);
+	ft_putnbr(va_arg(args, int), 1);
 }

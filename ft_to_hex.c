@@ -1,40 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_write.c                                         :+:      :+:    :+:   */
+/*   ft_to_hex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/22 15:10:18 by afaugero          #+#    #+#             */
-/*   Updated: 2024/11/28 12:41:23 by afaugero         ###   ########.fr       */
+/*   Created: 2024/11/28 11:11:02 by afaugero          #+#    #+#             */
+/*   Updated: 2024/11/28 12:42:14 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_write(va_list args, char const *s)
+void	ft_to_hex(unsigned long nbr, char const *base, int fd)
 {
-	unsigned int	i;
+	size_t const	base_len = ft_strlen(base);
 
-	i = 0;
-	while (*(s + i))
-	{
-		if (*(s + i) != '%')
-		{
-			ft_putchar_fd(*(s + i), 1);
-			ft_count(1, 0);
-			i++;
-		}
-		else if (*(s + i) == '%' && *(s + i + 1) == '%')
-		{
-			ft_putchar_fd(*(s + i), 1);
-			ft_count(1, 0);
-			i += 2;
-		}
-		else
-		{
-			ft_parse(args, *(s + i + 1));
-			i += 2;
-		}
-	}
+	if (nbr > base_len - 1)
+		ft_to_hex(nbr / base_len, base, fd);
+	ft_putchar_fd(base[nbr % base_len], fd);
+	ft_count(1, 0);
 }

@@ -6,11 +6,11 @@
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 15:49:46 by afaugero          #+#    #+#             */
-/*   Updated: 2024/11/23 14:41:30 by afaugero         ###   ########.fr       */
+/*   Updated: 2024/11/28 12:01:30 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_parse(va_list args, char c)
 {
@@ -26,6 +26,6 @@ void	ft_parse(va_list args, char c)
 		ft_parse_udec(args);
 	else if (c == 'x')
 		ft_parse_hex_low(args);
-	/* else if (c == 'X')
-		ft_parse_hex_up(args); */
+	else if (c == 'X')
+		ft_parse_hex_up(args);
 }

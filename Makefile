@@ -6,7 +6,7 @@
 #    By: afaugero <afaugerou@42.fr>                    +#+  +:+       +#+      #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 14:40:40 by afaugero          #+#    #+#              #
-#    Updated: 2024/11/23 16:59:03 by afaugero         ###   ########.fr        #
+#    Updated: 2024/11/28 12:52:05 by afaugero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@ CC = gcc
 INCLUDES = includes
 
 SRC = ft_printf \
+	  ft_count \
+	  ft_write \
 	  ft_parse \
 	  ft_parse_char \
 	  ft_parse_str \
@@ -24,6 +26,8 @@ SRC = ft_printf \
 	  ft_parse_udec \
 	  ft_parse_hex_low \
 	  ft_parse_hex_up \
+	  ft_to_hex \
+	  ft_putnbr \
 
 SRCS = $(addsuffix .c, ${SRC})
 
