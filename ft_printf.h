@@ -6,7 +6,7 @@
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 15:07:48 by afaugero          #+#    #+#             */
-/*   Updated: 2024/12/05 10:02:46 by afaugero         ###   ########.fr       */
+/*   Updated: 2024/12/12 09:59:09 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdarg.h>
 # include "libft/libft.h"
 
+int		ft_printf(const char *s, ...);
 size_t	ft_count(size_t n, int reset);
 void	ft_write(va_list args, char const *s);
 void	ft_parse(va_list args, char c);
