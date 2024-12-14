@@ -6,13 +6,20 @@
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 17:04:24 by afaugero          #+#    #+#             */
-/*   Updated: 2024/11/28 12:02:45 by afaugero         ###   ########.fr       */
+/*   Updated: 2024/12/14 19:05:05 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_parse_udec(va_list args)
+int	ft_parse_udec(unsigned int nbr)
 {
-	ft_putunbr(va_arg(args, unsigned int), 1);
+	char	*str;
+	size_t	len;
+
+	str = ft_uitoa(nbr);
+	ft_putstr_fd(str, 1);
+	len = ft_strlen(str);
+	free(str);
+	return (len);
 }

@@ -6,13 +6,20 @@
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 16:51:03 by afaugero          #+#    #+#             */
-/*   Updated: 2024/11/28 12:02:35 by afaugero         ###   ########.fr       */
+/*   Updated: 2024/12/14 18:33:27 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_parse_int(va_list args)
+int	ft_parse_int(int nbr)
 {
-	ft_putnbr(va_arg(args, int), 1);
+	char	*str;
+	size_t	len;
+
+	str = ft_itoa(nbr);
+	ft_putstr_fd(str, 1);
+	len = ft_strlen(str);
+	free(str);
+	return (len);
 }

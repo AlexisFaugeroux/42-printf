@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse_hex_up.c                                  :+:      :+:    :+:   */
+/*   ft_parse_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/22 17:04:44 by afaugero          #+#    #+#             */
-/*   Updated: 2024/11/28 12:03:18 by afaugero         ###   ########.fr       */
+/*   Created: 2024/11/22 17:05:04 by afaugero          #+#    #+#             */
+/*   Updated: 2024/12/14 20:08:07 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_parse_hex_up(va_list args)
+int	ft_parse_hex(unsigned long nb, char c)
 {
-	unsigned int	number;
+	char			*str;
+	size_t			len;
 
-	number = (unsigned int)va_arg(args, int);
-	ft_to_hex(number, FT_HEX_BASE_UP, 1);
+	if (c == 'x')
+		str = ft_ulong_itoa_base(nb, FT_HEX_BASE_LOW);
+	else
+		str = ft_ulong_itoa_base(nb, FT_HEX_BASE_UP);
+	ft_putstr_fd(str, 1);
+	len = ft_strlen(str);
+	free(str);
+	return (len);
 }

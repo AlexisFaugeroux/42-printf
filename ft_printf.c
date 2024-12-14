@@ -6,11 +6,12 @@
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 16:53:02 by afaugero          #+#    #+#             */
-/*   Updated: 2024/12/05 13:06:02 by afaugero         ###   ########.fr       */
+/*   Updated: 2024/12/14 19:07:49 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 int	ft_printf(const char *s, ...)
 {
@@ -20,10 +21,9 @@ int	ft_printf(const char *s, ...)
 	if (s == NULL)
 		return (-1);
 	va_start(args, s);
-	ft_write(args, s);
+	count = 0;
+	ft_write(args, s, &count);
 	va_end(args);
-	count = ft_count(0, 0);
-	ft_count(0, 1);
 	return (count);
 }
 

@@ -6,7 +6,7 @@
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 15:07:48 by afaugero          #+#    #+#             */
-/*   Updated: 2024/12/12 09:59:09 by afaugero         ###   ########.fr       */
+/*   Updated: 2024/12/14 20:06:01 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,13 @@
 # include "libft/libft.h"
 
 int		ft_printf(const char *s, ...);
-size_t	ft_count(size_t n, int reset);
-void	ft_write(va_list args, char const *s);
-void	ft_parse(va_list args, char c);
-void	ft_parse_char(va_list args);
-void	ft_parse_str(va_list args);
-void	ft_parse_void(va_list args);
-void	ft_parse_int(va_list args);
-void	ft_parse_udec(va_list args);
-void	ft_parse_hex_low(va_list args);
-void	ft_parse_hex_up(va_list args);
-void	ft_to_hex(unsigned long nbr, char const *base, int fd);
-void	ft_putnbr(int nbr, int fd);
-void	ft_putunbr(unsigned int nbr, int fd);
+void	ft_write(va_list args, char const *s, int *count);
+int		ft_parse(va_list args, char c);
+int		ft_parse_char(char c);
+int		ft_parse_str(char *str);
+int		ft_parse_void(void *addr);
+int		ft_parse_int(int nbr);
+int		ft_parse_udec(unsigned int nbr);
+int		ft_parse_hex(unsigned long nb, char c);
 
 #endif

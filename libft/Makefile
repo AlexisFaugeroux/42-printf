@@ -6,7 +6,7 @@
 #    By: afaugero <afaugerou@42.fr>                    +#+  +:+       +#+      #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 14:40:40 by afaugero          #+#    #+#              #
-#    Updated: 2024/11/23 16:42:27 by afaugero         ###   ########.fr        #
+#    Updated: 2024/12/14 20:09:35 by afaugero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,8 @@ SRC = ft_isalpha \
 			ft_strtrim \
 			ft_strnstr \
 			ft_itoa \
+			ft_uitoa \
+			ft_itoa_base \
 			ft_strmapi \
 			ft_split \
 			ft_putchar_fd \

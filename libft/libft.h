@@ -6,7 +6,7 @@
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:42:50 by afaugero          #+#    #+#             */
-/*   Updated: 2024/11/23 16:51:54 by afaugero         ###   ########.fr       */
+/*   Updated: 2024/12/14 20:11:02 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strnstr(char const *big, char const *little, size_t len);
 char	*ft_itoa(int n);
+char	*ft_uitoa(unsigned int n);
+char	*ft_ulong_itoa_base(unsigned long nbr, char const *base_to);
 char	*ft_convert_base(char const *nptr, char const *from, char const *to);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	**ft_split(char const *s, char c);

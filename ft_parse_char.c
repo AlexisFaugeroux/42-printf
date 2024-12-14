@@ -6,14 +6,14 @@
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 16:34:34 by afaugero          #+#    #+#             */
-/*   Updated: 2024/11/28 12:42:38 by afaugero         ###   ########.fr       */
+/*   Updated: 2024/12/14 18:30:28 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_parse_char(va_list args)
+int	ft_parse_char(char c)
 {
-	ft_putchar_fd(va_arg(args, int), 1);
-	ft_count(1, 0);
+	ft_putchar_fd(c, 1);
+	return (1);
 }

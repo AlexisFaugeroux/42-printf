@@ -6,26 +6,25 @@
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 16:43:47 by afaugero          #+#    #+#             */
-/*   Updated: 2024/11/28 12:42:58 by afaugero         ###   ########.fr       */
+/*   Updated: 2024/12/14 19:53:03 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_parse_void(va_list args)
+int	ft_parse_void(void *addr)
 {
-	unsigned long	addr;
+	unsigned long	addr_long;
 
-	addr = (unsigned long)va_arg(args, void *);
+	addr_long = (unsigned long)addr;
 	if (!addr)
 	{
 		ft_putstr_fd("(nil)", 1);
-		ft_count(5, 0);
+		return (5);
 	}
 	else
 	{
 		ft_putstr_fd("0x", 1);
-		ft_count(2, 0);
-		ft_to_hex(addr, FT_HEX_BASE_LOW, 1);
+		return (ft_parse_hex(addr_long, 'x') + 2);
 	}
 }
