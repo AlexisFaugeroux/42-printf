@@ -6,7 +6,7 @@
 /*   By: afaugero <afaugero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 16:53:02 by afaugero          #+#    #+#             */
-/*   Updated: 2024/12/14 19:07:49 by afaugero         ###   ########.fr       */
+/*   Updated: 2024/12/20 14:02:32 by afaugero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_printf(const char *s, ...)
 	va_list	args;
 	int		count;
 
-	if (s == NULL)
+	if (s == NULL || (*s == '%' && !*(s + 1)))
 		return (-1);
 	va_start(args, s);
 	count = 0;
